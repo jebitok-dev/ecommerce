@@ -6,7 +6,8 @@ class App extends React.Component {
     state = {
       meaningOfLife: 47
     }
-  
+  //state updates are ascynchronous if you want to use or manipulate the state use
+  //after the update add the second parameter which will be a function
 
     handleClick = () => {
       this.setState((prevState, prevProps) => {
