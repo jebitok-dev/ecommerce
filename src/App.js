@@ -3,16 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      meaningOfLife: 47 +     this.props.increment
+    state = {
+      meaningOfLife: 47
     }
-  }
+  
 
     handleClick = () => {
       this.setState((prevState, prevProps) => {
-        return {meaningOfLife: prevState.meaningOfLife + prevProps.increment}
+        return {meaningOfLife: prevState.meaningOfLife + 1}
       }, 
         () => console.log(this.state.meaningOfLife))
     }
