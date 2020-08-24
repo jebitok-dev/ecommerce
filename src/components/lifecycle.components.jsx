@@ -4,20 +4,20 @@ import React from 'react';
 class Lifecycles extends React.Component {
     constructor() { //declare/initialize our state
         super(); //method that gives class component access to lifecycle method
-        console.log('constructor');
+        console.log('constructor!');
     }
 
     //component being put on the DOM for the first time
     componentDidMount() {
-        console.log('componentDidMount');
+        console.log('componentDidMount!');
     }
 
     componentDidUpdate() {
-        console.log('componentDidUpdate');
+        console.log('componentDidUpdate!');
     }
 
     componentWillUnmount() {
-        console.log('componentWillUnmount');
+        console.log('componentWillUnmount!');
     }
 
     shouldComponentUpdate(nextProps, nextState) {
