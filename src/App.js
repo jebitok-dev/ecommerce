@@ -11,11 +11,12 @@ const HatsPage = () => (
   </div>
 )
 
+//switch gives control of our code
 //route takes a number of components (exact- false or true/path-localhost:3000/, /component)
 function App() {
         return (
           <div>
-          <Switch>
+          <Switch> 
             <Route exact path='/' component={HomePage} /> 
             <Route path='/hats' component={HatsPage} />
           </Switch>
