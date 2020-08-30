@@ -7,8 +7,9 @@ import './menu-item.styles.scss';
 
 
 //destructure and populate
-const MenuItem = ({ title, imageUrl, size, history }) => (
-    <div className={`${size} menu-item`} onClick={() => history.push()}
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
+    <div className={`${size} menu-item`} 
+    onClick={() => history.push(`${match.url}${linkUrl}`)}
     >
         <div className='background-image'
          style={{
