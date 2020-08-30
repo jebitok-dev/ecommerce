@@ -1,11 +1,15 @@
 import React from 'react';
+//withRouter is a higher-order component i.e a function that
+// takes a component and returns a modified component 
+import { withRouter } from 'react-router-dom';
 
 import './menu-item.styles.scss';
 
 
 //destructure and populate
-const MenuItem = ({ title, imageUrl, size }) => (
-    <div className={`${size} menu-item`} >
+const MenuItem = ({ title, imageUrl, size, history }) => (
+    <div className={`${size} menu-item`} onClick={() => history.push()}
+    >
         <div className='background-image'
          style={{
             backgroundImage: `url(${imageUrl})`
@@ -17,4 +21,4 @@ const MenuItem = ({ title, imageUrl, size }) => (
     </div>
 )
 
-export default MenuItem;
+export default  withRouter(MenuItem);
