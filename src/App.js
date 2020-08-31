@@ -5,11 +5,7 @@ import './App.css';
 
 import HomePage from './pages/homepage/homepage.component';
 
-const HatsPage = () => (
-  <div>
-    <h1>HATS PAGE</h1>
-  </div>
-)
+import ShopPage from './pages/shoppage/shop.component';
 
 //switch gives control of our code
 //route takes a number of components (exact- false or true/path-localhost:3000/, /component)
@@ -18,7 +14,7 @@ function App() {
           <div>
           <Switch> 
             <Route exact path='/' component={HomePage} /> 
-            <Route path='/hats' component={HatsPage} />
+            <Route path='/shop' component={ShopPage} />
           </Switch>
           </div>
         );
