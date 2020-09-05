@@ -16,11 +16,11 @@ const config = {
   firebase.initializeApp(config);
 
   export const auth = firebase.auth();
-  export const firebase = firebase();
+  export const firestore = firebase();
 
   //setting up google authentication
 const provider = new firebase.auth.GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' });
-export const SignInWithGoogle = () => auth.SignInWithPopup(provider);
+export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;

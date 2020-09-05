@@ -3,6 +3,8 @@ import React from 'react';
 import FormInput from '../form-input/form-input.component'
 import CustomButton from '../custom-button/custom-button.component';
 
+import {  signInWithGoogle } from '../../firebase/firebase.utils';
+
 import './sign-in.styles.scss';
 
 //using class since  we want to store what users is typing in
@@ -53,6 +55,8 @@ class SignIn extends React.Component {
                     />
 
                     <CustomButton type="submit" value="Submit Form">Sign In</CustomButton>
+        <CustomButton onClick={signInWithGoogle}>{''}
+        Sign In With Google{''}</CustomButton>
                 </form>
             </div>
         )
