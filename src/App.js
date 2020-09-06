@@ -11,7 +11,7 @@ import { auth } from './firebase/firebase.utils';
 
 //switch gives control of our code
 //route takes a number of components (exact- false or true/path-localhost:3000/, /component)
-class App extends React.Component() {
+class App extends React.Component {
   constructor() {
     super();
 
