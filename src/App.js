@@ -41,7 +41,7 @@ componentWillUnmount() {
   render() {
     return (
       <div>
-      <Header />
+      <Header currentUser={this.state.currentUser} />
       <Switch> 
         <Route exact path='/' component={HomePage} /> 
         <Route path='/shop' component={ShopPage} />
