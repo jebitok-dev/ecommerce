@@ -7,7 +7,7 @@ import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shoppage/shop.component';
 import Header from './components/header/header.component';
 import SignAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
-import { auth } from './firebase/firebase.utils';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 //switch gives control of our code
 //route takes a number of components (exact- false or true/path-localhost:3000/, /component)
@@ -27,9 +27,11 @@ class App extends React.Component {
   //open-subscription
 componentDidMount() {
   //user signedin or signed-out
-  this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-    this.setState({ currentUser: user })
-    console.log(user);
+  this.unsubscribeFromAuth = auth.onAuthStateChanged(async user => {
+    // this.setState({ currentUser: user })
+    createUserProfileDocument(user);
+
+    // console.log(user);
   })
 }
 
